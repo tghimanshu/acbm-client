@@ -39,7 +39,7 @@ export default function () {
           ></i>
         </nav>
 
-        <Link href="/register">
+        <Link href="/pre-register">
           <a className="get-started-btn">Pre Register</a>
         </Link>
       </div>
