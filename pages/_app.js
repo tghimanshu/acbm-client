@@ -1,8 +1,8 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../public/css/styles.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import Header from "../Components/header/header";
-import Footer from "../Components/footer/footer";
+import { AuthProvider } from "../context/authContext";
+import { HomeLayout } from "../Components/layouts/homeLayout";
 
 function MyApp({ Component, pageProps }) {
   // const router = useRouter();
@@ -10,13 +10,13 @@ function MyApp({ Component, pageProps }) {
   // const noNav = ["/login", "/register"];
 
   return (
-    <>
-      {/* {noNav.includes(asPath) ? null : <Header />} */}
-      <Header />
-      <Component {...pageProps} />
-      <Footer />
-      {/* {noNav.includes(asPath) ? null : <Footer />} */}
-    </>
+    <AuthProvider>
+      <HomeLayout>
+        {/* {noNav.includes(asPath) ? null : <Header />} */}
+        <Component {...pageProps} />
+        {/* {noNav.includes(asPath) ? null : <Footer />} */}
+      </HomeLayout>
+    </AuthProvider>
   );
 }
 
