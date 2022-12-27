@@ -1,6 +1,8 @@
 import { useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
+import { db } from "../firebase";
+import { addDoc, collection, doc } from "firebase/firestore";
 
 export default function () {
   const [name, setName] = useState("");
@@ -8,26 +10,29 @@ export default function () {
   const [contact, setContact] = useState("");
   const [college, setCollege] = useState("");
   const [course, setCourse] = useState("");
-  const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
+  const [antiSpam, setAntiSpam] = useState("");
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
 
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      if (
-        name === "" ||
-        email === "" ||
-        contact === "" ||
-        password === "" ||
-        confirmPassword === ""
-      ) {
+      if (name === "" || email === "" || contact === "") {
         window.scrollTo({
           top: 0,
           behavior: "smooth",
         });
         setError("Fill Required Fields...");
+        setTimeout(() => setError(""), 5000);
+        return;
+      }
+
+      if (antiSpam !== "") {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+        setError("Spam Detected!");
         setTimeout(() => setError(""), 5000);
         return;
       }
@@ -42,26 +47,13 @@ export default function () {
         return;
       }
 
-      if (password !== confirmPassword) {
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
-        });
-        setError("Passwords don't match");
-        setTimeout(() => setError(""), 5000);
-        return;
-      }
-      const data = await axios.post(
-        "https://acbm-server.herokuapp.com/api/student/register",
-        {
-          name,
-          email,
-          contact,
-          college,
-          course,
-          password,
-        }
-      );
+      await addDoc(collection(db, "pre-registrations"), {
+        name,
+        email,
+        contact,
+        college,
+        course,
+      });
       window.scrollTo({
         top: 0,
         behavior: "smooth",
@@ -148,27 +140,15 @@ export default function () {
                 onChange={(e) => setCourse(e.target.value)}
               />
             </div>
-            <div className="col-md-7 form-group mt-3">
-              <input
-                type="password"
-                className="form-control"
-                placeholder="Enter Password"
-                required
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-              />
-            </div>
-            <div className="col-md-7 form-group mt-3">
-              <input
-                type="password"
-                className="form-control"
-                placeholder="Confirm Password"
-                required
-                value={confirmPassword}
-                onChange={(e) => setConfirmPassword(e.target.value)}
-              />
-            </div>
             <div className="text-center mt-3">
+              {/* For Spam Prevention */}
+              <input
+                type="email"
+                name="email"
+                className="d-none"
+                value={antiSpam}
+                onChange={(e) => setAntiSpam(e.target.value)}
+              />
               <button type="submit" onClick={handleRegister}>
                 Register
               </button>
