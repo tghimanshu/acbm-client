@@ -12,9 +12,9 @@ export default function () {
           At the Right Time
         </h1>
         <h2>To Help Individuals Learn Skills The Right Way</h2>
-        <Link href="/register">
+        {/* <Link href="/register">
           <a className="btn-get-started">Pre Register</a>
-        </Link>
+        </Link> */}
       </div>
     </section>
   );
