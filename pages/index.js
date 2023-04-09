@@ -9,7 +9,7 @@ function Index() {
       <HeroSection />
       <main id="main">
         <About />
-        <Counts />
+        {/* <Counts /> */}
         <WhyAcbm />
       </main>
     </>

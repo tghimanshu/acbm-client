@@ -124,7 +124,7 @@ h6 {
   background: #fff;
   transition: all 0.5s;
   z-index: 997;
-  padding: 15px 0;
+  padding: 10px 0;
   box-shadow: 0px 0 18px rgba(55, 66, 59, 0.08);
 }
 #header .logo {
@@ -140,9 +140,9 @@ h6 {
 #header .logo a {
   color: var(--primary-color);
 }
-#header .logo img {
+/* #header .logo img {
   max-height: 40px;
-}
+} */
 
 /**
 * Get Startet Button 
@@ -526,6 +526,9 @@ section {
   font-size: 20px;
   padding-right: 4px;
   color: var(--primary-color);
+}
+.about .content p {
+  text-align: justify;
 }
 .about .content .learn-more-btn {
   background: var(--primary-color);

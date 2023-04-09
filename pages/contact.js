@@ -49,7 +49,7 @@ export default function () {
                   <i className="bi bi-envelope"></i>
                   <h4>Email:</h4>
                   <p>
-                    <a href="mailto:acbm.co.in">aman@acbm.co.in</a>
+                    <a href="mailto:info@acbmglobal.com">info@acbmglobal.com</a>
                   </p>
                 </div>
 

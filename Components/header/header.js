@@ -8,7 +8,8 @@ export default function () {
       <div className="container d-flex align-items-center">
         <h1 className="logo me-auto">
           <Link href="/">
-            <a>ACBM</a>
+            <img src="images/logo.png" width={100} />
+            {/* <a>ACBM</a> */}
           </Link>
         </h1>
 
@@ -39,9 +40,9 @@ export default function () {
           ></i>
         </nav>
 
-        <Link href="/pre-register">
+        {/* <Link href="/pre-register">
           <a className="get-started-btn">Pre Register</a>
-        </Link>
+        </Link> */}
       </div>
     </header>
   );
