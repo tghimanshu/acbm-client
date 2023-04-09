@@ -94,25 +94,31 @@ export default function () {
             </strong>
             . All Rights Reserved
           </div>
-          <div className="credits">
+          {/* <div className="credits">
             Designed by <a href="https://tghimanshu.github.io">TG Himanshu</a>
-          </div>
+          </div> */}
         </div>
         <div className="social-links text-center text-md-right pt-3 pt-md-0">
-          <a href="#" className="twitter">
-            <i className="bi bi-twitter"></i>
-          </a>
-          <a href="#" className="facebook">
+          <a href="http://bit.ly/acbmgmafb" className="facebook">
             <i className="bi bi-facebook"></i>
           </a>
-          <a href="#" className="instagram">
+          <a href="http://bit.ly/acbmgmaig" className="instagram">
             <i className="bi bi-instagram"></i>
           </a>
-          <a href="#" className="google-plus">
-            <i className="bi bi-skype"></i>
-          </a>
-          <a href="#" className="linkedin">
+          <a href="http://bit.ly/ACBMLinkden" className="linkedin">
             <i className="bi bi-linkedin"></i>
+          </a>
+          <a href="http://bit.ly/ACBMYoutube" className="google-plus">
+            <i className="bi bi-youtube"></i>
+          </a>
+          <a href="http://bit.ly/acbmgmawa" className="google-plus">
+            <i className="bi bi-whatsapp"></i>
+          </a>
+          <a
+            href="https://t.me/acbmglobalmentoracademy"
+            className="google-plus"
+          >
+            <i className="bi bi-telegram"></i>
           </a>
         </div>
       </div>

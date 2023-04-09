@@ -4,6 +4,7 @@
   /* --primary-color-hover: #3ac162; */
   --primary-color: #dd9933;
   --primary-color-hover: #b6781b;
+  scroll-padding-top: 120px;
 }
 
 /*--------------------------------------------------------------
@@ -487,8 +488,8 @@ section {
   color: #37423b;
 }
 
-.breadcrumbs {
-  margin-top: 73px;
+breadcrumbs {
+  margin-top: 120px;
   text-align: center;
   background: var(--primary-color);
   padding: 30px 0;
@@ -637,9 +638,10 @@ section {
   padding: 18px;
   color: var(--primary-color);
   margin-bottom: 30px;
-  background: #ecf9f0;
+  /* background: #ecf9f0; */
   border-radius: 50px;
   transition: all 0.4s;
+  background: var(--primary-color);
 }
 .why-us .icon-boxes .icon-box svg:hover {
   background: var(--primary-color);

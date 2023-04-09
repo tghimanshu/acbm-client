@@ -25,10 +25,20 @@ export default function () {
                 <a className="active">Home</a>
               </Link>
             </li>
+            <li>
+              <a href="/#about" className="active">
+                About Us
+              </a>
+            </li>
+            <li>
+              <a href="/#why-us" className="active">
+                Our Pillars
+              </a>
+            </li>
 
             <li>
               <Link href={"/contact"}>
-                <a>Contact</a>
+                <a className="active">Contact Us</a>
               </Link>
             </li>
           </ul>
