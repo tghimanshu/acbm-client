@@ -1,5 +1,16 @@
 import Link from "next/link";
-export default function () {
+
+/**
+ * HeroSection component for the ACBM application.
+ *
+ * This component renders the main hero banner of the homepage, featuring:
+ * - A headline message ("Doing the Right Thing At the Right Time").
+ * - A subheadline describing the mission.
+ * - A commented-out "Pre Register" button.
+ *
+ * @returns {JSX.Element} The rendered Hero section.
+ */
+export default function HeroSection() {
   return (
     <section
       id="hero"

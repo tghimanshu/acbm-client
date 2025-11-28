@@ -2,7 +2,21 @@ import { useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
 
-export default function () {
+/**
+ * PreRegister page component.
+ *
+ * This component renders a registration form for students to pre-register.
+ * It collects personal and academic details and sends them to the backend API.
+ *
+ * Features:
+ * - Form inputs for Name, Email, Contact, College, Course, and Password.
+ * - Client-side validation for required fields, email format, and password matching.
+ * - Displays success and error messages using alerts and toast notifications (imported but not used directly in code logic shown, relies on state).
+ * - Smooth scrolling to top on submission or error.
+ *
+ * @returns {JSX.Element} The rendered PreRegister page.
+ */
+export default function PreRegister() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [contact, setContact] = useState("");
@@ -13,6 +27,14 @@ export default function () {
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
 
+  /**
+   * Handles the registration form submission.
+   *
+   * Validates inputs, makes an API call to register the student,
+   * and handles success/failure feedback.
+   *
+   * @param {React.FormEvent<HTMLButtonElement>} e - The click event from the register button.
+   */
   const handleRegister = async (e) => {
     e.preventDefault();
     try {

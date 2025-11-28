@@ -1,12 +1,34 @@
 import { useState } from "react";
 import axios from "axios";
 
-export default function () {
+/**
+ * Contact page component.
+ *
+ * This component renders a contact form and contact information.
+ * It allows users to send messages to the server via an API endpoint.
+ *
+ * Features:
+ * - Displays location, email, and phone number.
+ * - Form inputs for Name, Email, Subject, and Message.
+ * - Validates input and sends a POST request to the backend.
+ * - Handles loading and success/error states.
+ *
+ * @returns {JSX.Element} The rendered Contact page.
+ */
+export default function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
 
+  /**
+   * Handles the form submission.
+   *
+   * Prevents default form behavior, disables the button during submission,
+   * sends the form data to the server, and updates the UI based on the response.
+   *
+   * @param {React.FormEvent<HTMLButtonElement>} e - The click event from the submit button.
+   */
   const handleSubmit = async (e) => {
     e.preventDefault();
     e.target.disabled = true;

@@ -1,4 +1,14 @@
-export default function () {
+/**
+ * Counts component for the ACBM application.
+ *
+ * This component renders a section displaying statistical counts, such as:
+ * - Number of Students.
+ * - Number of Mentors.
+ * - Number of Events.
+ *
+ * @returns {JSX.Element} The rendered Counts section.
+ */
+export default function Counts() {
   return (
     <section id="counts" className="counts section-bg">
       <div className="container">

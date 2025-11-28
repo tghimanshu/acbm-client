@@ -1,4 +1,14 @@
-export default function () {
+/**
+ * Footer component for the ACBM application.
+ *
+ * This component renders the footer section of the website, including:
+ * - Copyright information.
+ * - Social media links (Facebook, Instagram, LinkedIn, YouTube, WhatsApp, Telegram).
+ * - A commented-out section for newsletter subscription and additional links.
+ *
+ * @returns {JSX.Element} The rendered footer component.
+ */
+export default function Footer() {
   return (
     <footer id="footer">
       {/* <div className="footer-top">

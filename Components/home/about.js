@@ -1,5 +1,16 @@
 import Image from "next/image";
-export default function () {
+
+/**
+ * About component for the ACBM application.
+ *
+ * This component renders the "About Us" section of the homepage, containing:
+ * - A description of ACBM's mission and approach.
+ * - Details about the global mentor academy and its holistic growth strategies.
+ * - An image placeholder (currently empty).
+ *
+ * @returns {JSX.Element} The rendered About section.
+ */
+export default function About() {
   return (
     <section id="about" className="about">
       <div className="container" data-aos="fade-up">

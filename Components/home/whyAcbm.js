@@ -2,7 +2,19 @@ import { HiAcademicCap } from "react-icons/hi";
 import { BsGraphUp } from "react-icons/bs";
 import { RiVipCrownLine, RiLightbulbFlashLine } from "react-icons/ri";
 
-export default function () {
+/**
+ * WhyAcbm component for the ACBM application.
+ *
+ * This component renders the "Why Choose Us" section (Our Pillars).
+ * It displays four main pillars of the organization:
+ * - ACADEMICS: Empowering students, faculty, and institutes.
+ * - CORPORATE: Providing learning, development, and career management for professionals.
+ * - BUSINESS: Offering consulting solutions for entrepreneurs and enterprises.
+ * - MENTOR: Connecting experienced mentors to provide solutions.
+ *
+ * @returns {JSX.Element} The rendered "Why Choose Us" section.
+ */
+export default function WhyAcbm() {
   return (
     <>
       <section id="why-us" className="why-us">
